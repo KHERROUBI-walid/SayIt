@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.app {
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  background-color: #D7FF7B;
+  padding: 10px;
+}
+
+.header h2 {
+  color: #4D61F4;
+}
+
+
+
+.learning-title {
+  color: #4D61F4;
+  margin: 90px 0 30px 0;
+}
+
+.language-selector button {
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.language-selector .selected {
+  background-color: #4D61F4;
+  color: white;
+}
+
+.language-selector button:not(.selected) {
+  background-color: #D7FF7B;
+  color: white;
+}
+
+.active-members h3 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.colors {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.posts-container {
+  margin-bottom: 90px;
+}
+
+.album-cover img {
+  height: 65px;
+  border-radius: 50%;
+
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.profile-info h4 {
+  margin: 0;
+  text-align: start;
+}
+
+.profile-info p {
+  text-align: start;
+}
+.message-box {
+  background-color: white;
+  height: 100px;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+.profile h4, .profile p {
+  color: white;
+}
+
+
+
