@@ -1,14 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { io } from 'socket.io-client';
 import AudioRecorder from './AudioRecorder';
+import Footer from '../Footer/Footer';
 
-const socket = io("http://localhost:3001"); // Remplace par l'URL de ton backend en prod
+const socket = io("http://localhost:3001");
 
 const AddPostForm = () => {
   const [userName, setUserName] = useState('');
   const [text, setText] = useState('');
   const [audioURL, setAudioURL] = useState('');
+
+  useEffect(() => {
+    // Vérification de la connexion WebSocket
+    socket.on('connect', () => {
+      console.log('Connecté au serveur WebSocket');
+    });
+
+    socket.on('disconnect', () => {
+      console.log('Déconnecté du serveur WebSocket');
+    });
+
+    // Nettoyage à la déconnexion
+    return () => {
+      socket.off('connect');
+      socket.off('disconnect');
+    };
+  }, []);
 
   const handleAudioRecorded = (url) => {
     setAudioURL(url);
@@ -56,6 +74,7 @@ const AddPostForm = () => {
 
         <button className="post" type="submit">Post</button>
       </form>
+      <Footer />
     </StyledWrapper>
   );
 };

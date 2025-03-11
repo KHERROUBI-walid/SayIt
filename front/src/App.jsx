@@ -6,6 +6,7 @@ import ActiveMembers from './components/ActiveMembers';
 import Post from './components/Post/Post.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import AddPostForm from './components/Form/AddPostForm.jsx';
+import Explore from './components/Explore/Explore.jsx';
 import './App.css';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             } 
           />
           <Route path="/add-post" element={<AddPostForm />} />
+          <Route path="/explore" element={<Explore />} />
         </Routes>
       </div>
     </Router>
@@ -36,21 +38,3 @@ function App() {
 }
 
 export default App;
-
-
-
-/*import React from 'react'
-
-import './App.css'
-import AudioRecorder from './components/AudioRecorder';
-
-
-const App = () => {
-  return (
-    <div className="app">
-      <AudioRecorder />
-    </div>
-  );
-};
-
-export default App */
